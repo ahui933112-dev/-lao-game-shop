@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#101827">
+<title>Lao Game Shop</title>
+<style>
+:root{--bg:#0b1120;--panel:#121c2f;--panel2:#17243a;--text:#f4f7fb;--muted:#a8b4c8;--line:#2b3a52;--accent:#7c5cff;--green:#35d39a;--gold:#ffd166}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at top,#1b2850 0,#0b1120 48%);color:var(--text);font-family:system-ui,-apple-system,"Segoe UI",sans-serif}button,input{font:inherit}button{cursor:pointer}.wrap{max-width:1120px;margin:auto;padding:0 18px}.top{border-bottom:1px solid var(--line);background:#0b1120dd;position:sticky;top:0;z-index:5;backdrop-filter:blur(12px)}.nav{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:15px 0}.brand{display:flex;align-items:center;gap:10px;font-weight:900;font-size:19px}.logo{display:grid;place-items:center;width:42px;height:42px;border-radius:13px;background:linear-gradient(135deg,var(--accent),#27c5c5);font-size:22px}.navlinks{display:flex;gap:8px;align-items:center}.pill,.btn{border:1px solid var(--line);background:var(--panel);color:var(--text);padding:10px 14px;border-radius:12px}.btn.primary{background:linear-gradient(135deg,#7c5cff,#4b8bff);border:0;font-weight:800}.btn.green{background:#0e6a50;border-color:#1a9e77}.hero{padding:48px 0 30px;display:grid;grid-template-columns:1.25fr .75fr;gap:24px;align-items:center}.eyebrow{color:var(--green);font-weight:800;letter-spacing:.08em;font-size:12px}.hero h1{font-size:clamp(34px,6vw,62px);line-height:1.08;margin:12px 0}.hero h1 span{color:#a99aff}.hero p{color:var(--muted);line-height:1.7;max-width:620px}.hero-card{border:1px solid #46547c;border-radius:26px;padding:24px;background:linear-gradient(145deg,#202d52,#111a2c);box-shadow:0 24px 70px #0004}.hero-art{font-size:76px;text-align:center;margin:4px}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:20px}.stat{padding:12px;border-radius:14px;background:#ffffff09;text-align:center}.stat b{display:block;font-size:20px}.stat small{color:var(--muted)}.section{padding:24px 0 42px}.section-head{display:flex;align-items:end;justify-content:space-between;gap:14px;margin-bottom:18px}.section h2{font-size:26px;margin:0 0 5px}.muted{color:var(--muted)}.tools{display:flex;gap:9px;flex-wrap:wrap}.search{min-width:190px;flex:1;max-width:300px;background:var(--panel);border:1px solid var(--line);border-radius:12px;color:var(--text);padding:11px 13px}.categories{display:flex;gap:8px;overflow:auto;padding:2px 0 16px}.cat{white-space:nowrap;border:1px solid var(--line);background:var(--panel);color:var(--muted);border-radius:999px;padding:9px 14px}.cat.active{background:#33265e;color:white;border-color:#7c5cff}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}.product{border:1px solid var(--line);border-radius:19px;background:linear-gradient(160deg,#17243a,#101827);overflow:hidden}.cover{height:145px;display:grid;place-items:center;font-size:55px;background:radial-gradient(circle at 50% 35%,#5d4db1,#202c4a 62%,#152035)}.product:nth-child(3n+2) .cover{background:radial-gradient(circle at 50% 35%,#237f91,#202c4a 62%,#152035)}.product:nth-child(3n) .cover{background:radial-gradient(circle at 50% 35%,#9b5b2c,#202c4a 62%,#152035)}.product-body{padding:15px}.tag{font-size:11px;color:var(--green);font-weight:800}.product h3{margin:6px 0;font-size:17px}.product p{margin:0 0 12px;color:var(--muted);font-size:13px;min-height:38px;line-height:1.5}.price-row{display:flex;justify-content:space-between;align-items:center;gap:8px}.price{font-weight:900;font-size:19px;color:var(--gold)}.buy{padding:8px 11px;border-radius:10px;border:0;background:var(--accent);color:white;font-weight:800}.notice{border:1px solid #65502a;background:#332817;color:#f7dfaa;padding:13px 15px;border-radius:13px;font-size:13px;line-height:1.55;margin-top:18px}.features{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.feature{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:18px}.feature b{display:block;margin:7px 0}.feature p{margin:0;color:var(--muted);font-size:13px;line-height:1.6}.footer{border-top:1px solid var(--line);padding:25px 0 35px;color:var(--muted);font-size:13px}.cart-count{display:inline-grid;place-items:center;min-width:20px;height:20px;background:var(--green);color:#05251c;border-radius:99px;font-size:12px;font-weight:900;margin-left:4px}.toast{position:fixed;bottom:18px;left:50%;transform:translateX(-50%);background:#e9fff6;color:#073b2b;border-radius:13px;padding:12px 18px;box-shadow:0 8px 35px #0006;display:none;z-index:9;font-weight:700;max-width:90%;text-align:center}.empty{grid-column:1/-1;padding:28px;text-align:center;color:var(--muted);border:1px dashed var(--line);border-radius:16px}
+@media(max-width:760px){.hero{grid-template-columns:1fr;padding-top:32px}.hero-card{padding:18px}.hero-art{font-size:58px}.grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.cover{height:115px;font-size:43px}.product-body{padding:11px}.product h3{font-size:15px}.price{font-size:16px}.buy{font-size:12px;padding:8px}.features{grid-template-columns:1fr}.navlinks .hide-mobile{display:none}.section-head{align-items:start;flex-direction:column}.search{max-width:none;width:100%}}
+@media(max-width:390px){.grid{grid-template-columns:1fr}.cover{height:135px}.stats{grid-template-columns:1fr 1fr 1fr}.brand{font-size:16px}}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap nav">
+  <div class="brand"><div class="logo">🎮</div><div>LAO GAME <span style="color:#a99aff">SHOP</span><div style="font-size:10px;color:var(--muted);font-weight:600;letter-spacing:.12em">DIGITAL GOODS • GAME TOP-UP</div></div></div>
+  <div class="navlinks"><button class="pill hide-mobile" onclick="showInfo()">วิธีสั่งซื้อ</button><button class="btn primary" onclick="showCart()">🛒 ตะกร้า <span id="cartCount" class="cart-count">0</span></button></div>
+</div></header>
+<main class="wrap">
+<section class="hero">
+  <div><div class="eyebrow">YOUR GAMING CORNER</div><h1>เติมเกมง่าย ๆ<br><span>ในสไตล์ของคุณ</span></h1><p>หน้าร้านเกมออนไลน์สำหรับแสดงสินค้าและแพ็กเกจเติมเกม ออกแบบให้ใช้งานง่ายบนมือถือ Android — เลือกสินค้าแล้วเพิ่มลงตะกร้าได้เลย</p><button class="btn primary" onclick="document.getElementById('shop').scrollIntoView({behavior:'smooth'})">เลือกดูสินค้า ↓</button> <button class="btn" onclick="showInfo()">วิธีสั่งซื้อ</button>
+    <div class="stats"><div class="stat"><b>🎯</b><small>เลือกสินค้า</small></div><div class="stat"><b>🛡️</b><small>สั่งซื้ออย่างระวัง</small></div><div class="stat"><b>📱</b><small>เหมาะกับมือถือ</small></div></div>
+  </div>
+  <div class="hero-card"><div class="hero-art">🕹️</div><div style="text-align:center;font-weight:900;font-size:22px">LEVEL UP YOUR GAME</div><p style="text-align:center;margin-bottom:0">ร้านค้าดิจิทัลของคุณ เริ่มต้นได้ฟรีด้วยหน้าเว็บนี้</p></div>
+</section>
+<section class="section" id="shop">
+  <div class="section-head"><div><div class="eyebrow">SHOP CATALOG</div><h2>สินค้าแนะนำ</h2><div class="muted" style="font-size:14px">ตัวอย่างสินค้า — เปลี่ยนชื่อและราคาให้ตรงกับร้านจริงก่อนเปิดขาย</div></div><div class="tools"><input class="search" id="search" placeholder="ค้นหาสินค้า..." oninput="renderProducts()"></div></div>
+  <div class="categories" id="categories"><button class="cat active" data-cat="ทั้งหมด" onclick="setCategory('ทั้งหมด',this)">ทั้งหมด</button><button class="cat" data-cat="เติมเกม" onclick="setCategory('เติมเกม',this)">เติมเกม</button><button class="cat" data-cat="บัตรดิจิทัล" onclick="setCategory('บัตรดิจิทัล',this)">บัตรดิจิทัล</button><button class="cat" data-cat="ไอเทม" onclick="setCategory('ไอเทม',this)">ไอเทม</button></div>
+  <div class="grid" id="products"></div>
+  <div class="notice">⚠️ ข้อมูลในหน้านี้เป็นตัวอย่างเท่านั้น ยังไม่มีระบบรับชำระเงินจริง ไม่มีการส่งสินค้าอัตโนมัติ และยังไม่ได้เชื่อม Supabase กรุณาตั้งค่าสินค้า ราคา เงื่อนไข และระบบชำระเงินก่อนใช้งานเชิงพาณิชย์</div>
+</section>
+<section class="section"><div class="section-head"><div><div class="eyebrow">HOW IT WORKS</div><h2>สั่งซื้ออย่างไร</h2></div></div><div class="features">
+  <div class="feature"><div style="font-size:27px">🛍️</div><b>1. เลือกสินค้า</b><p>ค้นหาสินค้าที่ต้องการแล้วเพิ่มลงในตะกร้า</p></div>
+  <div class="feature"><div style="font-size:27px">💬</div><b>2. ติดต่อร้าน</b><p>เมื่อเชื่อมระบบจริงแล้ว ให้ลูกค้าส่งรายละเอียดคำสั่งซื้อผ่านช่องทางของร้าน</p></div>
+  <div class="feature"><div style="font-size:27px">✅</div><b>3. ตรวจสอบคำสั่งซื้อ</b><p>ตรวจสอบยอดเงินและข้อมูลผู้เล่นให้ถูกต้องก่อนดำเนินการ</p></div>
+</div></section>
+</main>
+<footer class="footer"><div class="wrap" style="display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap"><span>© <span id="year"></span> Lao Game Shop</span><span>Starter storefront • แก้ไขข้อมูลได้ในไฟล์ index.html</span></div></footer>
+<div id="toast" class="toast" role="status"></div>
+<script>
+const products = [
+ {id:1,name:"แพ็กเติมเกมเริ่มต้น",category:"เติมเกม",price:250,icon:"💎",desc:"แพ็กเกจตัวอย่างสำหรับแสดงหน้าร้าน"},
+ {id:2,name:"แพ็กเติมเกมพรีเมียม",category:"เติมเกม",price:500,icon:"⚡",desc:"เปลี่ยนชื่อและราคาให้ตรงกับสินค้าจริง"},
+ {id:3,name:"บัตรดิจิทัล",category:"บัตรดิจิทัล",price:300,icon:"🎟️",desc:"ตัวอย่างบัตรดิจิทัลสำหรับหน้าร้าน"},
+ {id:4,name:"ไอเทมพิเศษ",category:"ไอเทม",price:150,icon:"🧰",desc:"ตัวอย่างรายการไอเทมในเกม"},
+ {id:5,name:"แพ็กเติมเกมสุดคุ้ม",category:"เติมเกม",price:750,icon:"🚀",desc:"ตัวอย่างแพ็กเกจยอดนิยม"},
+ {id:6,name:"เครดิตดิจิทัล",category:"บัตรดิจิทัล",price:100,icon:"🪙",desc:"ตัวอย่างเครดิตดิจิทัล"}
+];
+let activeCategory="ทั้งหมด", cart=[];
+const money=n=>new Intl.NumberFormat("th-TH").format(n)+" ฿";
+function renderProducts(){
+ const q=document.getElementById("search").value.trim().toLowerCase();
+ const list=products.filter(p=>(activeCategory==="ทั้งหมด"||p.category===activeCategory)&&(p.name+" "+p.desc+" "+p.category).toLowerCase().includes(q));
+ document.getElementById("products").innerHTML=list.length?list.map(p=>`<article class="product"><div class="cover">${p.icon}</div><div class="product-body"><div class="tag">${p.category.toUpperCase()}</div><h3>${p.name}</h3><p>${p.desc}</p><div class="price-row"><div class="price">${money(p.price)}</div><button class="buy" onclick="addToCart(${p.id})">+ เพิ่ม</button></div></div></article>`).join(""):'<div class="empty">ไม่พบสินค้าที่ค้นหา</div>';
+}
+function setCategory(cat,el){activeCategory=cat;document.querySelectorAll(".cat").forEach(b=>b.classList.remove("active"));el.classList.add("active");renderProducts()}
+function addToCart(id){const p=products.find(x=>x.id===id);cart.push(p);document.getElementById("cartCount").textContent=cart.length;toast("เพิ่ม “"+p.name+"” ลงตะกร้าแล้ว")}
+function showCart(){if(!cart.length){toast("ตะกร้ายังว่างอยู่ — เลือกสินค้าก่อนครับ");return}const lines=cart.map((p,i)=>(i+1)+". "+p.name+" — "+money(p.price)).join("\\n");const total=cart.reduce((s,p)=>s+p.price,0);alert("ตะกร้าสินค้า (ตัวอย่าง)\\n\\n"+lines+"\\n\\nรวม: "+money(total)+"\\n\\nระบบนี้ยังไม่รับชำระเงินจริง กรุณาติดต่อผู้ดูแลร้านเพื่อทดสอบขั้นต่อไป")}
+function showInfo(){alert("วิธีสั่งซื้อ\\n1. เลือกสินค้าและเพิ่มลงตะกร้า\\n2. ตรวจสอบรายการสินค้า\\n3. ติดต่อร้านเพื่อยืนยันรายละเอียด\\n\\nหมายเหตุ: เว็บไซต์ตัวอย่างนี้ยังไม่มีระบบชำระเงินหรือส่งออเดอร์จริง")}
+function toast(msg){const el=document.getElementById("toast");el.textContent=msg;el.style.display="block";clearTimeout(window.toastTimer);window.toastTimer=setTimeout(()=>el.style.display="none",2400)}
+document.getElementById("year").textContent=new Date().getFullYear();renderProducts();
+</script>
+</body>
+</html>
